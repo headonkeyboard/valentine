@@ -1,0 +1,10 @@
+@layer components {
+    #close-button > svg {
+        @apply animate-disappear;
+        animation-play-state: paused;
+    }
+
+    #close-button:hover > svg {
+        animation-play-state: running;
+    }
+}

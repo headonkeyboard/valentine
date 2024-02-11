@@ -1,0 +1,12 @@
+@layer utilities {
+    .squircle {
+        --squircle-smooth: 1;
+        --squircle-radius: 16px;
+        mask-image: paint(squircle);
+    }
+
+    .squircle-lg {
+        @apply squircle;
+        --squircle-radius: 32px;
+    }
+}

@@ -1,0 +1,5 @@
+@layer components {
+    .credit-link {
+        @apply hover:text-[#FF2F6F] group-data-[screen=lets-go]/screen:hover:text-black underline;
+    }
+}

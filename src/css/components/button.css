@@ -1,0 +1,40 @@
+@layer components {
+    .btn-content {
+        @apply font-serif text-white text-lg p-4;
+    }
+
+    .btn {
+        @apply w-36 rounded-2xl btn-content transition-shadow-and-bg-color duration-200 squircle;
+
+        --shadow-blur-and-offset: 6.69px;
+        --drop-shadow-color: rgba(51, 9, 22, 0.2);
+
+        box-shadow: inset 0 calc(-1 * var(--shadow-blur-and-offset)) var(--shadow-blur-and-offset) var(--shadow-1-color),
+                    inset 0 var(--shadow-blur-and-offset) var(--shadow-blur-and-offset) var(--shadow-2-color),
+                    0 14.53px 29.07px var(--drop-shadow-color);
+    }
+
+    .btn--primary {
+        @apply bg-[#FF2F6F];
+
+        --shadow-1-color: #DC2960;
+        --shadow-2-color: #FF347B;
+    }
+
+    .btn--primary:hover {
+        --shadow-1-color: #A01D4C;
+        --shadow-2-color: #DC2869;
+
+        --shadow-blur-and-offset: 4.89px;
+        --drop-shadow-color: rgba(198, 0, 71, 0.4);
+
+        @apply bg-gradient-to-b from-[#A71E4F] to-[#D52766];
+    }
+
+    .btn--secondary {
+        @apply bg-[#45000D];
+
+        --shadow-1-color: #35000A;
+        --shadow-2-color: #45000D;
+    }
+}

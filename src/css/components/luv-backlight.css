@@ -1,0 +1,29 @@
+@layer components {
+    .luv-backlight {
+        position: absolute;
+        inset: 0;
+        @apply pointer-events-none;
+    }
+
+    .luv-backlight:before {
+        content: '';
+        position: absolute;
+        width: 496px;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        background: #FF2F6F;
+        border-radius: 100%;
+        will-change: width, height;
+        transition: 300ms ease-in-out width, 300ms ease-in-out height;
+        @apply aspect-square
+    }
+
+    .luv-backlight:after {
+        content: '';
+        display: block;
+        position: absolute;
+        inset: 0;
+        backdrop-filter: blur(300px);
+    }
+}

@@ -1,0 +1,9 @@
+@layer components {
+    .screen {
+        @apply absolute inset-0 opacity-0 pointer-events-none flex flex-col justify-center items-center;
+    }
+
+    .screen-active {
+        @apply opacity-100 pointer-events-auto;
+    }
+}

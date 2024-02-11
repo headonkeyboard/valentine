@@ -1,0 +1,17 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+@import './components/button.css';
+@import './components/no-button.css';
+@import './components/screen.css';
+@import './components/close-button.css';
+@import './components/luv-backlight.css';
+@import './components/credit-link.css';
+
+@import "tailwindcss/utilities";
+@import './utilities/squircle.css';
+
+@font-face {
+    font-family: "Dwight";
+    src: url('/font/Dwight_Trial-Bold.otf');
+}

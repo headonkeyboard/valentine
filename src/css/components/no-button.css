@@ -1,0 +1,33 @@
+:root {
+    --translation-step-1: 0, 0;
+    --translation-step-2: -10px, 120px;
+    --translation-step-3: -280px, -75px;
+    --translation-step-4: -107px, 0;
+}
+
+@layer components {
+    #no-button {
+        transform: translate(var(--translation-step));
+        position: relative;
+    }
+
+    #no-button[data-step="4"] > * {
+        transition: transform 300ms ease-in-out;
+    }
+    
+    #no-button[data-step="4"]:hover > * {
+        transform: translate(40px, 0) rotate(15deg);
+    }
+    
+    #no-button[data-step="4"] > *:before {
+        --scale-x: 0.38;
+        --scale-y: 0.86;
+
+        box-shadow: none;
+
+        transform: scale(var(--scale-x), var(--scale-y));
+
+        /* avoid border radius to be affected by scale */
+       border-radius: calc(16px / var(--scale-x)) / calc(16px / var(--scale-y));
+    }
+}
