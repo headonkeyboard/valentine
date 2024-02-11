@@ -1,10 +1,10 @@
 @layer components {
     .btn-content {
-        @apply font-serif text-white text-lg p-4;
+        @apply font-serif text-white text-lg p-3 md:p-4;
     }
 
     .btn {
-        @apply w-36 rounded-2xl btn-content transition-shadow-and-bg-color duration-200 squircle;
+        @apply w-28 md:w-36 rounded-2xl btn-content transition-shadow-and-bg-color duration-200 squircle;
 
         --shadow-blur-and-offset: 6.69px;
         --drop-shadow-color: rgba(51, 9, 22, 0.2);

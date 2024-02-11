@@ -9,6 +9,7 @@
         content: '';
         position: absolute;
         width: 496px;
+        height: 496px;
         top: 50%;
         left: 50%;
         transform: translate3d(-50%, -50%, 0);
@@ -16,7 +17,6 @@
         border-radius: 100%;
         will-change: width, height;
         transition: 300ms ease-in-out width, 300ms ease-in-out height;
-        @apply aspect-square
     }
 
     .luv-backlight:after {
@@ -25,5 +25,9 @@
         position: absolute;
         inset: 0;
         backdrop-filter: blur(300px);
+    }
+
+    .luv-backlight-active {
+        @apply h-screen w-screen;
     }
 }

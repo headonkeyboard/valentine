@@ -8,9 +8,9 @@
   </head>
   <body class="group/screen bg-black flex flex-col justify-center items-center h-screen p-4" data-screen="valentine-question">
 
-    <div class="luv-backlight before:group-data-[screen=lets-go]/screen:w-screen"></div>
+    <div class="luv-backlight before:group-data-[screen=lets-go]/screen:luv-backlight-active"></div>
 
-    <div class="relative w-full max-w-[624px] h-[552px]">
+    <div class="relative w-full max-w-[624px] aspect-square max-h-[552px]">
       
       <!-- MAIN CARD -->
       <main class="relative bg-white squircle-lg after:z-40 after:bg-noise after:absolute after:inset-0 after:pointer-events-none rounded-[32px] w-full h-full">
@@ -28,18 +28,18 @@
           <div class="pt-14 flex flex-col justify-center items-center h-full">
   
             <div class="relative flex flex-col items-center">
-              <img class="absolute t-0 z-10 animate-luv_appear" src="/images/luv.png" alt="" />
+              <img class="absolute t-0 z-10 animate-luv_appear max-w-14 md:max-w-none" src="/images/luv.png" alt="" />
   
-              <div class="bg-white relative z-20 pb-4">
+              <div class="bg-white relative z-20 pb-2 md:pb-4 max-w-44 md:max-w-none">
                 <img src="/images/will-you.png" alt="Will you be my Valentine?" />
               </div>
             </div>
   
-            <div class="relative z-30 flex items-center space-x-4 mt-8">
+            <div class="relative z-30 flex items-center space-x-4 mt-6 md:mt-8">
               <button class="yes-button relative btn btn--primary z-20">Yes</button>
   
               <!-- NO BUTTON -->
-              <button id="no-button" class="duration-300 transition-transform ease-in-out w-36">
+              <button id="no-button" class="duration-300 transition-transform ease-in-out no-button-mobile md:no-button-desktop">
                 <span class="relative block before:-z-1 before:absolute before:inset-0 before:btn before:btn--secondary before:duration-300 before:transition-rounded btn-content">
                   <span class="z-20">No</span>
                 </span>
@@ -56,7 +56,7 @@
         </section>
 
         <!-- VALENTINE PLUS -->
-        <section class="screen screen--valentine-plus group-data-[screen=valentine-plus]/screen:screen-active">
+        <section class="screen screen--valentine-plus group-data-[screen=valentine-plus]/screen:screen-active p-8">
           <div>
             <img src="/images/try-valentine-plus.png" alt="Try Valentine Plus today!">
             <button class="yes-button btn btn--primary w-full mt-4">

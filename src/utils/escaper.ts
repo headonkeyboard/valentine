@@ -8,6 +8,7 @@ export function makeItEscape(element: HTMLButtonElement) {
     if (isEventAllowed) {
       mouseenterCount = Math.min(count, MAX_MOUSEENTER_STEPS)
       element.style.setProperty('--translation-step', `var(--translation-step-${mouseenterCount})`)
+      element.style.setProperty('--translation-step-mobile', `var(--translation-step-mobile-${mouseenterCount})`)
       element.dataset.step = `${mouseenterCount}`;
       isEventAllowed = false;
 
@@ -19,5 +20,11 @@ export function makeItEscape(element: HTMLButtonElement) {
   }
 
   element.addEventListener('mouseenter', () => updateMouseenterCount(mouseenterCount + 1))
+  element.addEventListener('touchstart', (e) => {
+    if (mouseenterCount < MAX_MOUSEENTER_STEPS) {
+      e.preventDefault()
+    }
+    updateMouseenterCount(mouseenterCount + 1)
+  })
   updateMouseenterCount(1)
 }

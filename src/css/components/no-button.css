@@ -3,12 +3,25 @@
     --translation-step-2: -10px, 120px;
     --translation-step-3: -280px, -75px;
     --translation-step-4: -107px, 0;
+
+    --translation-step-mobile-1: 0, 0;
+    --translation-step-mobile-2: -10px, 80px;
+    --translation-step-mobile-3: -205px, -65px;
+    --translation-step-mobile-4: -85px, 0;
 }
 
 @layer components {
     #no-button {
-        transform: translate(var(--translation-step));
         position: relative;
+        @apply w-28 md:w-36;
+    }
+
+    .no-button-mobile {
+        transform: translate(var(--translation-step-mobile));
+    }
+
+    .no-button-desktop {
+        transform: translate(var(--translation-step));
     }
 
     #no-button[data-step="4"] > * {
